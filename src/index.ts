@@ -1,2 +1,7 @@
-export const one = 1
-export const two = 2
+import { Hono } from 'hono'
+
+const app = new Hono()
+
+app.get('/', c => c.text('Hono!'))
+
+export default app
